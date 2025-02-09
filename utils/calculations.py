@@ -8,3 +8,6 @@ def calculate_calories(weight, height, age, activity_minutes):
     bmr = 10 * weight + 6.25 * height - 5 * age
     activity_calories = (activity_minutes // 30) * 200
     return bmr + activity_calories
+
+def calculate_calorie_norm(weight, height, age):
+    return 10 * weight + 6.25 * height - 5 * age + 5

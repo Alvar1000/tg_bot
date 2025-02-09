@@ -1,9 +1,9 @@
 import asyncio
 from aiogram import Bot, Dispatcher
 from configs import TOKEN
-
+from aiogram.filters import Command
 from middlewares import LoggingMiddleware
-from handlers import food, profile, progress, water
+from handlers import food, profile, progress, water, workout
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
@@ -14,7 +14,7 @@ routers = [
     profile.router,
     progress.router,
     water.router,
-#   workout.router,
+    workout.router,
 ]
 
 dp.include_routers(*routers)
